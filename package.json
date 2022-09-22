@@ -1,0 +1,81 @@
+{
+  "name": "react-picker-view-mobile",
+  "author": "xuesen.net@gmail.com",
+  "version": "1.0.0",
+  "description": "基于react的选择器",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:panxuesen/react-picker-view-mobile.git"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/react-picker-view-mobile.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-picker-view-mobile.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-picker-view-mobile.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "dependencies": {
+    "@react-spring/web": "^9.5.4",
+    "@use-gesture/react": "^10.2.20",
+    "ahooks": "^3.7.1",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "@types/lodash": "^4.14.185",
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "husky": "^8.0.1",
+    "less": "^4.1.3",
+    "postcss": "^8.4.16",
+    "postcss-modules": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-css-porter": "^1.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "size-limit": "^8.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  }
+}
