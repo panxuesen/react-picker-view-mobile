@@ -1,7 +1,7 @@
 {
   "name": "react-picker-view-mobile",
   "author": "xuesen.net@gmail.com",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "基于react的选择器",
   "license": "MIT",
   "main": "dist/index.js",
@@ -53,8 +53,7 @@
   ],
   "dependencies": {
     "@react-spring/web": "^9.5.4",
-    "@use-gesture/react": "^10.2.20",
-    "ahooks": "^3.7.1"
+    "@use-gesture/react": "^10.2.20"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",

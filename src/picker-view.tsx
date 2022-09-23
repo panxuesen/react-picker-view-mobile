@@ -3,8 +3,10 @@ import React, { memo, ReactNode, useCallback, useEffect, useState } from 'react'
 import { Wheel } from './wheel'
 import { useColumnsExtend } from './columns-extend'
 import { NativeProps, withNativeProps } from './native-props'
-import { useDebounceEffect } from 'ahooks'
+// import { useDebounceEffect } from 'ahooks'
 import './picker-view.less'
+
+const useDebounceEffect = useEffect
 
 export interface DebounceOptions {
   wait?: number;
@@ -90,11 +92,11 @@ export const PickerView = memo<PickerViewProps>(p => {
       props.onChange?.(innerValue, extend)
     },
     [innerValue],
-    {
-      wait: 0,
-      leading: false,
-      trailing: true,
-    }
+    // {
+    //   wait: 0,
+    //   leading: false,
+    //   trailing: true,
+    // }
   )
 
   const handleSelect = useCallback((val: PickerValue, index: number) => {

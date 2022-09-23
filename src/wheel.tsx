@@ -1,4 +1,4 @@
-import React, { memo, ReactNode, useRef } from 'react'
+import React, { memo, ReactNode, useRef, useEffect as useIsomorphicLayoutEffect } from 'react'
 // import {isEqual} from 'lodash'
 
 import { useSpring, animated } from '@react-spring/web'
@@ -10,7 +10,7 @@ import {
 } from '@use-gesture/react'
 import { measureCSSLength } from './measure-css-length'
 import { supportsPassive } from './supports-passive'
-import { useIsomorphicLayoutEffect } from 'ahooks'
+// import { useIsomorphicLayoutEffect } from 'ahooks'
 
 function isEqual(a: any, b: any) {
   let stra = a ? JSON.stringify(a) : a
@@ -63,9 +63,6 @@ export function rubberbandIfOutOfBounds(
     return +rubberband(position - max, dimension, constant) + max
   return position
 }
-
-
-// ============================>
 
 const classPrefix = `adm-picker-view`
 
@@ -205,55 +202,55 @@ export const Wheel = memo<Props>(
       }
     )
 
-    let selectedIndex: number | null = null
+    // let selectedIndex: number | null = null
 
-    function renderAccessible() {
-      if (selectedIndex === null) {
-        return null
-      }
-      const current = column[selectedIndex]
-      const previousIndex = selectedIndex - 1
-      const nextIndex = selectedIndex + 1
-      const previous = column[previousIndex]
-      const next = column[nextIndex]
-      return (
-        <div className='adm-picker-view-column-accessible'>
-          <div
-            className='adm-picker-view-column-accessible-current'
-            role='button'
-            aria-label={
-              current ? `当前选择的是：${current.label}` : '当前未选择'
-            }
-          >
-            -
-          </div>
-          <div
-            className='adm-picker-view-column-accessible-button'
-            onClick={() => {
-              if (!previous) return
-              scrollSelect(previousIndex)
-            }}
-            role={previous ? 'button' : 'text'}
-            aria-label={
-              !previous ? '没有上一项' : `选择上一项：${previous.label}`
-            }
-          >
-            -
-          </div>
-          <div
-            className='adm-picker-view-column-accessible-button'
-            onClick={() => {
-              if (!next) return
-              scrollSelect(nextIndex)
-            }}
-            role={next ? 'button' : 'text'}
-            aria-label={!next ? '没有下一项' : `选择下一项：${next.label}`}
-          >
-            -
-          </div>
-        </div>
-      )
-    }
+    // function renderAccessible() {
+    //   if (selectedIndex === null) {
+    //     return null
+    //   }
+    //   const current = column[selectedIndex]
+    //   const previousIndex = selectedIndex - 1
+    //   const nextIndex = selectedIndex + 1
+    //   const previous = column[previousIndex]
+    //   const next = column[nextIndex]
+    //   return (
+    //     <div className='adm-picker-view-column-accessible'>
+    //       <div
+    //         className='adm-picker-view-column-accessible-current'
+    //         role='button'
+    //         aria-label={
+    //           current ? `当前选择的是：${current.label}` : '当前未选择'
+    //         }
+    //       >
+    //         -
+    //       </div>
+    //       <div
+    //         className='adm-picker-view-column-accessible-button'
+    //         onClick={() => {
+    //           if (!previous) return
+    //           scrollSelect(previousIndex)
+    //         }}
+    //         role={previous ? 'button' : 'text'}
+    //         aria-label={
+    //           !previous ? '没有上一项' : `选择上一项：${previous.label}`
+    //         }
+    //       >
+    //         -
+    //       </div>
+    //       <div
+    //         className='adm-picker-view-column-accessible-button'
+    //         onClick={() => {
+    //           if (!next) return
+    //           scrollSelect(nextIndex)
+    //         }}
+    //         role={next ? 'button' : 'text'}
+    //         aria-label={!next ? '没有下一项' : `选择下一项：${next.label}`}
+    //       >
+    //         -
+    //       </div>
+    //     </div>
+    //   )
+    // }
 
     return (
       <div className={`${classPrefix}-column`}>
@@ -290,7 +287,7 @@ export const Wheel = memo<Props>(
             )
           })}
         </animated.div>
-        {renderAccessible()}
+        {/* {renderAccessible()} */}
       </div>
     )
   },
