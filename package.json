@@ -1,7 +1,7 @@
 {
   "name": "react-picker-view-mobile",
   "author": "xuesen.net@gmail.com",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "基于react的选择器",
   "license": "MIT",
   "main": "dist/index.js",
