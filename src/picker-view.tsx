@@ -1,5 +1,5 @@
 import React, { memo, ReactNode, useCallback, useEffect, useState } from 'react'
-import { mergeProps } from './with-default-props'
+// import { mergeProps } from './with-default-props'
 import { Wheel } from './wheel'
 import { useColumnsExtend } from './columns-extend'
 import { NativeProps, withNativeProps } from './native-props'
@@ -55,7 +55,8 @@ const defaultProps = {
 }
 
 export const PickerView = memo<PickerViewProps>(p => {
-  const props = mergeProps(defaultProps, p)
+  // const props = mergeProps(defaultProps, p)
+  const props = Object.assign(defaultProps, p)
 
   const [innerValue, setInnerValue] = useState<PickerValue[]>(
     props.value === undefined ? props.defaultValue : props.value

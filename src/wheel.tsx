@@ -1,5 +1,5 @@
 import React, { memo, ReactNode, useRef } from 'react'
-import {isEqual} from 'lodash'
+// import {isEqual} from 'lodash'
 
 import { useSpring, animated } from '@react-spring/web'
 import {
@@ -11,6 +11,12 @@ import {
 import { measureCSSLength } from './measure-css-length'
 import { supportsPassive } from './supports-passive'
 import { useIsomorphicLayoutEffect } from 'ahooks'
+
+function isEqual(a: any, b: any) {
+  let stra = a ? JSON.stringify(a) : a
+  let strb = b ? JSON.stringify(b) : b
+  return stra === strb
+}
 
 export type PickerValue = string | null
 
