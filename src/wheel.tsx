@@ -266,7 +266,7 @@ export const Wheel = memo<Props>(
         >
           {column.map((item, index) => {
             const selected = props.value === item.value
-            if (selected) selectedIndex = index
+            // if (selected) selectedIndex = index
             function handleClick() {
               draggingRef.current = false
               scrollSelect(index)
