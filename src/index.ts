@@ -1,7 +1,6 @@
 import { PickerView } from './picker-view'
 import { canUseDom } from './supports-passive'
 import './global/global.less';
-// import './picker-view.less'
 
 
 canUseDom && document.addEventListener('touchstart', () => {}, true)

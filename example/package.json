@@ -8,12 +8,12 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "antd-mobile": "^5.24.0",
     "react-app-polyfill": "^1.0.0",
     "react-dom": "^18.2.0"
   },
   "alias": {
     "react": "../node_modules/react",
-    "lodash-es": "lodash",
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
   },
   "devDependencies": {

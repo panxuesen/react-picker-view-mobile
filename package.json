@@ -1,7 +1,7 @@
 {
   "name": "react-picker-view-mobile",
   "author": "xuesen.net@gmail.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "基于react的选择器",
   "license": "MIT",
   "main": "dist/index.js",
@@ -56,7 +56,8 @@
     "@use-gesture/react": "^10.2.20",
     "ahooks": "^3.7.1",
     "classnames": "^2.3.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",
